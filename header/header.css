@@ -1,0 +1,130 @@
+/*
+ * CSS file 
+ */
+ :root
+{
+    --header_height: 200px;
+    --body_offset: 180px;
+    --header_item_height: 50px;
+}
+ .flex-container 
+ {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: var(--header_height);
+    justify-content: space-evenly;
+ }
+ .flex-container > .main-part
+ {
+    position: relative;
+    top: var(--header_height);
+ }
+ .flex-container > .header-flex
+ {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    max-height: var(--header_height);
+}
+.header-flex > .header-menu
+{
+    position: absolute;
+    justify-content: space-between;
+}
+.separator
+{
+    left: 0px;
+    width: 100%;
+    /* border-bottom-width: medium|thin|thick|length|initial|inherit;
+     * border-bottom-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|initial|inherit;
+     * border-bottom-color: color|transparent|initial|inherit;
+     */
+    border-bottom: medium dashed blue;
+ }
+ /* menu horizontal */
+nav
+{
+	width: 100%;
+	position: relative;
+    font-size: 40px;
+    margin: 0 auto;
+    padding: 0px;
+}
+nav > ul
+{
+	list-style-type: none;
+}
+nav > ul::after
+{
+	content: "";
+	display: table;
+	clear  : both;
+}
+nav > ul > li
+{
+ 	float: left;
+	width: 15%; 
+	text-align: center;
+    position: relative;
+}
+nav > ul > li:nth-child(n+2)
+{
+    top: var(--header_item_height);
+}
+nav > ul li:hover .sous_menu
+{
+	display:block;
+}
+nav > a
+{
+    display: block;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+ul > li > a 
+{
+    top: 250px;
+}
+nav a:hover
+{
+    background-color: yellow;
+    border-bottom: 2px solid gold;
+}
+.sous_menu
+ {
+    display: none;
+    box-shadow: 0px 1px 2px green;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    z-index: 1111;
+ }
+ .sous_menu a
+ {
+    padding: 3px;
+    border-bottom: none;
+ }
+ .sous_menu a:hover
+ {
+    border-bottom: none;
+    background-color: yellow;
+ }
+.sous_menu > li
+{
+	float: none; 
+	width: 100%;
+	text-align: left;
+}
+.deroulant > a::after
+{
+    content: " V";
+    font-size: 15px;
+    font-style: bold;
+    color: red;
+}
