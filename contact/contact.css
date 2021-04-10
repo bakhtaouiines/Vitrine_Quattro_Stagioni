@@ -1,0 +1,16 @@
+/*
+ * CSS file : 'header.css' must be included before this curent one...
+ */
+ 
+.contact-flex 
+{
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 100%;
+}
+.contact-item 
+{
+    margin: auto;
+}

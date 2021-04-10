@@ -1,50 +1,52 @@
 /*
  * CSS file 
  */
+ /* Reset CSS, be sure to have the same behavior whatever is the browser */
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: Avenir, sans-serif;
+}
+/* Global variables declaration */
  :root
 {
-    --header_height: 200px;
-    --body_offset: 180px;
+    --header_height: 210px;
+    --body_offset: 230px;
     --header_item_height: 50px;
+    --header_menu_offset: 50px;
 }
- .flex-container 
+/* Go on... */
+ .header-flex 
  {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
     height: var(--header_height);
-    justify-content: space-evenly;
  }
- .flex-container > .main-part
- {
-    position: relative;
-    top: var(--header_height);
- }
- .flex-container > .header-flex
- {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 0;
-    left: 0px;
-    width: 100%;
-    max-height: var(--header_height);
-}
-.header-flex > .header-menu
+.header-flex > .header-item
 {
+    top:0;
     position: absolute;
-    justify-content: space-between;
 }
+.header-flex > .header-item:nth-child(1)
+ {
+    left: 0;
+    margin: 0;
+}
+ .header-flex > .header-item:nth-child(n+2)
+ {
+    margin: 10px;
+ }
 .separator
 {
-    left: 0px;
     width: 100%;
     /* border-bottom-width: medium|thin|thick|length|initial|inherit;
      * border-bottom-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|initial|inherit;
      * border-bottom-color: color|transparent|initial|inherit;
      */
     border-bottom: medium dashed blue;
+    margin: 10px;
  }
  /* menu horizontal */
 nav
@@ -56,6 +58,10 @@ nav
     padding: 0px;
 }
 nav > ul
+{
+	list-style-type: none;
+}
+nav > ul > li > ul
 {
 	list-style-type: none;
 }
@@ -75,6 +81,7 @@ nav > ul > li
 nav > ul > li:nth-child(n+2)
 {
     top: var(--header_item_height);
+    left: var(--header_menu_offset);
 }
 nav > ul li:hover .sous_menu
 {
