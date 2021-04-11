@@ -20,7 +20,7 @@
  {
     display: inline-flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     width: 100%;
     height: var(--header_height);
  }

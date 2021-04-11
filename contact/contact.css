@@ -4,13 +4,14 @@
  
 .contact-flex 
 {
-    display: inline-flex;
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    position: absolute;
     width: 100%;
+    align-items: center;
 }
-.contact-item 
+.contact-flex > .contact-item 
 {
-    margin: auto;
+    position: relative;
+    width: 50%;
 }
