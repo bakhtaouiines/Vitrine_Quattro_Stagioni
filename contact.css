@@ -1,13 +1,18 @@
 /*
- * CSS file 
+ * CSS file : 'header.css' must be included before this curent one...
  */
- /* Reset CSS, be sure to have the same behavior whatever is the browser */
-*{
+ * {
 	margin: 0px;
 	padding: 0px;
-	font-family: Avenir, sans-serif;
-    background-image: url('../header/marble-background2.jpeg');
+    text-decoration: none;
+    color: black;
 }
+
+ html {
+    background-image: url(images/marble-background2.jpeg);
+    font-family: 'Kiwi Maru', serif;
+ }
+
 /* Global variables declaration */
  :root
 {
@@ -39,22 +44,13 @@
  {
     margin: 10px;
  }
-.separator
-{
-    width: 100%;
-    /* border-bottom-width: medium|thin|thick|length|initial|inherit;
-     * border-bottom-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|initial|inherit;
-     * border-bottom-color: color|transparent|initial|inherit;
-     */
-    border-bottom: medium dashed blue;
-    margin: 10px;
- }
+
  /* menu horizontal */
 nav
 {
 	width: 100%;
 	position: relative;
-    font-size: 40px;
+    font-size: 30px;
     margin: 0 auto;
     padding: 0px;
 }
@@ -99,16 +95,12 @@ ul > li > a
 {
     top: 250px;
 }
-nav a:hover
-{
-    background-color: yellow;
-    border-bottom: 2px solid gold;
-}
+
 .sous_menu
  {
     display: none;
-    box-shadow: 0px 1px 2px green;
-    background-color: white;
+    background-color: url("marble-background2.jpeg");
+    opacity: 0.8;
     position: absolute;
     width: 100%;
     z-index: 1111;
@@ -118,21 +110,33 @@ nav a:hover
     padding: 3px;
     border-bottom: none;
  }
+
  .sous_menu a:hover
  {
     border-bottom: none;
-    background-color: yellow;
+    background-color: white;
+    opacity: 0.5;
  }
+
 .sous_menu > li
 {
 	float: none; 
 	width: 100%;
 	text-align: left;
 }
-.deroulant > a::after
-{
-    content: " *";
-    font-size: 20px;
-    font-style: bold;
-    color: red;
-}
+ 
+ .contact-flex 
+ {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     width: 100%;
+     align-items: center;
+ }
+ .contact-flex > .contact-item 
+ {
+    position: relative;
+    width: 50%;
+    top: 20px;
+    left: 50px;
+ }
