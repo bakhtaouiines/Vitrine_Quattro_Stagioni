@@ -97,10 +97,10 @@ ul > li > a
 .sous_menu
  {
     display: none;
-    background-color: white;
     position: absolute;
     width: 100%;
     z-index: 1111;
+    font-size: 25px;
  }
  .sous_menu a
  {
