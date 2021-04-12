@@ -6,6 +6,7 @@
 	margin: 0px;
 	padding: 0px;
 	font-family: Avenir, sans-serif;
+    background-image: url('../header/marble-background2.jpeg');
 }
 /* Global variables declaration */
  :root
@@ -130,8 +131,8 @@ nav a:hover
 }
 .deroulant > a::after
 {
-    content: " V";
-    font-size: 15px;
+    content: " *";
+    font-size: 20px;
     font-style: bold;
     color: red;
 }
